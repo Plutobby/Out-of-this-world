@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Showcase Landing Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-fU7VnIjKX9XVzhC1j+SKzNfNwvc8EzW5K5si5ncQb5Czd0h9+hbcYDfzKjOe3iM3ffgxQMA4fP4O4ebKpRiB8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-Cblq3Al2dA4au4grGc4EGE1pGRitbL9bhEpM/tfoMgO63IMpivTjTstbNoTk/KLsGBZfmq3q2Q99Av6N+sU7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css">
   </head>
   <body>
+        <!-- Scripts -->
+        <script src="main.js"></script>
+    
     <!-- Navigation Bar -->
     <nav class="flex justify-between items-center py-4 px-8 bg-white shadow">
       <a href="#" class="text-2xl font-bold text-gray-800">Product Showcase</a>
@@ -23,7 +28,9 @@
       <p class="text-xl text-gray-200 mb-8">With our three.js and GSAP skills, we can help you create an interactive product showcase that will engage your audience.</p>
       <a href="#" class="bg-white text-purple-800 py-3 px-8 rounded-full font-medium hover:bg-gray-100 hover:text-purple-900">Get Started</a>
     </section>
-
+   <!-- Three.js canvas -->
+   <canvas id="myCanvas"></canvas>
+   <div id="canvas-container"></div>
     <!-- Features Section -->
     <section class="py-20 px-8 bg-gray-100">
       <div class="max-w-4xl mx-auto">
@@ -73,12 +80,7 @@
       <div class="container mx-auto py-8 px-4">
         <p class="text-gray-600 text-center">&copy; 2023, All rights reserved.</p>
       </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-fU7VnIjKX9XVzhC1j+SKzNfNwvc8EzW5K5si5ncQb5Czd0h9+hbcYDfzKjOe3iM3ffgxQMA4fP4O4ebKpRiB8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-Cblq3Al2dA4au4grGc4EGE1pGRitbL9bhEpM/tfoMgO63IMpivTjTstbNoTk/KLsGBZfmq3q2Q99Av6N+sU7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/main.js"></script>
-  </body>
+    </footer> 
+ </body>
 </html>
 
