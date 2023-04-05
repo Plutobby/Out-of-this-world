@@ -1,27 +1,28 @@
-// Initialize Three.js scene
+// Get the canvas element from the HTML
+const canvas = document.getElementById("myCanvas");
+
+// Create the Three.js scene, camera, and renderer
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const canvas = document.getElementById('myCanvas');
+const camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ canvas });
-renderer.setSize(window.innerWidth, window.innerHeight);
 
-// Create a sphere and add it to the scene
-const geometry = new THREE.SphereGeometry(1, 32, 32);
-const material = new THREE.MeshPhongMaterial({ color: 0xffffff });
-const sphere = new THREE.Mesh(geometry, material);
-scene.add(sphere);
+// Create a cube geometry and material
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
 
-// Add lighting to the scene
-const light = new THREE.PointLight(0xffffff, 1, 100);
-light.position.set(0, 0, 10);
-scene.add(light);
+// Create a mesh from the geometry and material, and add it to the scene
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
 
-// Set up animation with GSAP
-gsap.to(sphere.rotation, { duration: 10, y: Math.PI * 2, repeat: -1, ease: "power2.out" });
+// Position the camera and cube
+camera.position.z = 5;
+cube.position.x = 1;
 
 // Render the scene
-function animate() {
-  requestAnimationFrame(animate);
+function render() {
+  requestAnimationFrame(render);
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
   renderer.render(scene, camera);
 }
-animate();
+render();

@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Showcase Landing Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.131.2/build/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-fU7VnIjKX9XVzhC1j+SKzNfNwvc8EzW5K5si5ncQb5Czd0h9+hbcYDfzKjOe3iM3ffgxQMA4fP4O4ebKpRiB8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-Cblq3Al2dA4au4grGc4EGE1pGRitbL9bhEpM/tfoMgO63IMpivTjTstbNoTk/KLsGBZfmq3q2Q99Av6N+sU7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css">
-  </head>
+    <script src="main.js"></script>
+</head>
   <body>
-        <!-- Scripts -->
-        <script src="main.js"></script>
+    <style>
+        canvas{
+            width: 100%;
+        }
+        iframe{
+            margin: 10px;
+            width: 100%;
+            height: 100vh;
+        }
+        #bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+    </style>
     
     <!-- Navigation Bar -->
     <nav class="flex justify-between items-center py-4 px-8 bg-white shadow">
@@ -24,13 +43,23 @@
 
     <!-- Hero Section -->
     <section class="py-20 px-8 bg-gradient-to-r from-purple-800 to-indigo-800 text-center">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://www.youtube.com/embed/belYW6E_NL8" type="video/mp4">
+            <source src="https://www.youtube.com/embed/belYW6E_NL8" type="video/webm">
+            <source src="https://www.youtube.com/embed/belYW6E_NL8" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          
       <h1 class="text-4xl font-bold text-white mb-8">Showcase Your Product in 3D</h1>
       <p class="text-xl text-gray-200 mb-8">With our three.js and GSAP skills, we can help you create an interactive product showcase that will engage your audience.</p>
       <a href="#" class="bg-white text-purple-800 py-3 px-8 rounded-full font-medium hover:bg-gray-100 hover:text-purple-900">Get Started</a>
     </section>
    <!-- Three.js canvas -->
-   <canvas id="myCanvas"></canvas>
-   <div id="canvas-container"></div>
+  <!--  <div>
+    <iframe  src="https://www.youtube.com/embed/belYW6E_NL8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div> -->
+  <!-- 
+   <canvas id="myCanvas"></canvas> -->
     <!-- Features Section -->
     <section class="py-20 px-8 bg-gray-100">
       <div class="max-w-4xl mx-auto">
