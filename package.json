@@ -1,0 +1,25 @@
+{
+  "name": "out-of-this-world",
+  "version": "1.0.0",
+  "description": "Threejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/lawrenceku/Out-of-this-world.git"
+  },
+  "keywords": [
+    "WebGl"
+  ],
+  "author": "Lawrence",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lawrenceku/Out-of-this-world/issues"
+  },
+  "homepage": "https://github.com/lawrenceku/Out-of-this-world#readme",
+  "dependencies": {
+    "three": "^0.151.3"
+  }
+}
